@@ -3,12 +3,19 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+import os
+
 # ----------------------------
 # Load parquet files
 # ----------------------------
-agg1 = pd.read_parquet(r"C:\Users\Komak\Downloads\agg1.parquet")
-agg2 = pd.read_parquet(r"C:\Users\Komak\Downloads\agg2.parquet")
-agg3 = pd.read_parquet(r"C:\Users\Komak\Downloads\agg3.parquet")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+agg1_path = os.path.join(BASE_DIR, "data", "agg1.parquet")
+agg2_path = os.path.join(BASE_DIR, "data", "agg2.parquet")
+agg3_path = os.path.join(BASE_DIR, "data", "agg3.parquet")
+
+agg1 = pd.read_parquet(agg1_path)
+agg2 = pd.read_parquet(agg2_path)
+agg3 = pd.read_parquet(agg3_path)
 
 st.title("📈 Interactive Stock Analysis Dashboard")
 
@@ -62,7 +69,7 @@ with tab1:
     if show_volume:
         st.subheader("📦 Average Volume by Sector")
         st.bar_chart(
-            agg2.pivot(index="sector", columns=None, values="avg_volume"),
+            agg2.set_index("sector")["avg_volume"],
             height=300
         )
 
