@@ -16,17 +16,6 @@ agg1.parquet -- Daily average close price by ticker
 agg2.parquet -- Average trading volume by sector
 agg3.parquet -- Daily simple return per ticker
 
-DataVisualizationAssignment/
-│
-├── app.py
-├── README.md
-└── data/
-     ├── agg1.parquet
-     ├── agg2.parquet
-     └── agg3.parquet
-     └── cleaned.parquet
-     └── datacleaning.ipynb
-
   
 Cleaning Steps Performed
 -- Converted all column headers to snake_case
