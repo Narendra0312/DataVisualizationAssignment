@@ -1,4 +1,3 @@
-```
 **Interactive Stock Analysis Dashboard**
 This Streamlit application visualizes daily stock performance using pre-aggregated Parquet files.
 It provides charts and tables for close prices, sector volume, and daily returns with interactive filters.
