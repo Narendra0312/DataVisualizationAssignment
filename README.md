@@ -1,3 +1,4 @@
+```
 **Interactive Stock Analysis Dashboard**
 This Streamlit application visualizes daily stock performance using pre-aggregated Parquet files.
 It provides charts and tables for close prices, sector volume, and daily returns with interactive filters.
@@ -16,7 +17,7 @@ agg1.parquet -- Daily average close price by ticker
 agg2.parquet -- Average trading volume by sector
 agg3.parquet -- Daily simple return per ticker
 
-```
+
 Cleaning Steps Performed
 -- Converted all column headers to snake_case
 -- Trimmed whitespace from both column names and data fields
