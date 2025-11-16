@@ -16,14 +16,15 @@ agg1.parquet -- Daily average close price by ticker
 agg2.parquet -- Average trading volume by sector
 agg3.parquet -- Daily simple return per ticker
 
-```Cleaning Steps Performed
--- Converted all column headers to snake_case
--- Trimmed whitespace from both column names and data fields
--- Normalized missing values ("", "NA", "N/A", "null", "-") to pd.NA
--- Converted all date fields to YYYY-MM-DD format
--- Cast numeric fields (prices, volumes, etc.) to float
--- Removed all duplicate rows to ensure data consistency
-```
+## Cleaning Steps Performed
+
+- Converted all column headers to snake_case
+- Trimmed whitespace from both column names and data fields
+- Normalized missing values ("", "NA", "N/A", "null", "-") to `pd.NA`
+- Converted all date fields to YYYY-MM-DD format
+- Cast numeric fields (prices, volumes, etc.) to float
+- Removed all duplicate rows to ensure data consistency
+
 
 cleaned.parquet —  cleaned and normalized dataset.
 
