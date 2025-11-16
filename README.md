@@ -16,7 +16,7 @@ agg1.parquet -- Daily average close price by ticker
 agg2.parquet -- Average trading volume by sector
 agg3.parquet -- Daily simple return per ticker
 
-#### Cleaning Steps Performed
+**Cleaning Steps Performed**
 
 - Converted all column headers to snake_case
 - Trimmed whitespace from both column names and data fields
